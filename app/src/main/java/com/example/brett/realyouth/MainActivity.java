@@ -23,7 +23,7 @@ import java.util.stream.Stream;
 
 public class MainActivity extends AppCompatActivity {
 
-        Streaming stream = new Streaming(this);
+        Streaming stream = new Streaming(MainActivity.this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

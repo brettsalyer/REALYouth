@@ -111,6 +111,7 @@ public class Streaming extends AppCompatActivity {
 
     //Handles when the user interacts with the seekbar
     public void onDrag(){
+        musicSeek = (SeekBar)((Activity)context).findViewById(R.id.music_seek);
         musicSeek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
