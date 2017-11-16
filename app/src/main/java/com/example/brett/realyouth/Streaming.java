@@ -83,28 +83,30 @@ public class Streaming extends AppCompatActivity {
 
     //What happens when the user interacts with the button
     public void onPlayClick (){
+
         play_pause = (ImageButton)((Activity)context).findViewById(R.id.playButton);
+        play_pause.setImageResource(R.drawable.ic_play_name);
+
         play_pause.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                play_pause.setImageResource(R.drawable.ic_pause_name);
-
-                try {
-                    prepareStreaming();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-                if (mp.isPlaying()) {
+                if(mp.isPlaying()){
                     pauseStreaming();
                     play_pause.setImageResource(R.drawable.ic_play_name);
-
-
-                } else {
-                    //mediaPlayer.start();
+                }else{
+                    play_pause.setImageResource(R.drawable.ic_pause_name);
+                    try {
+                        prepareStreaming();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                     startStreaming();
+                    updateSeekBar();
+                    onDrag();
                 }
+
+
             }
         });
     }
