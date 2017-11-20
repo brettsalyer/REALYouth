@@ -1,0 +1,10 @@
+*Need to finish AsyncTask for downloading and inserting JSON
+*Add a more intuitive layout (navigation drawer?)
+*Push notifications
+*Youth Schedule
+*Add thumbnail obect to JSON?
+*MediaPlayer control from lockscreen/notification drawer
+*Loading resrouce into MediaPlayer only once. Right now we are recieving errors when the MediaPlayer tries to reload a data source
+ all over again when the button is toggled.
+ 
+ **UPDATE AS NEEDED**
